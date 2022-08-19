@@ -258,7 +258,7 @@ political_decisions = {
 			is_culture_group = arab
 			OR = {
 				tag = HAL
-				tag = HDJ
+				tag = NEJ
 			}
 			NOT = {
 				exists = ARA
@@ -304,7 +304,7 @@ political_decisions = {
 		potential = {
 			is_culture_group = arab
 			OR = {
-				tag = HAL
+				tag = NEJ
 				tag = HDJ
 			}
 			any_owned_province = { is_core = HAL }

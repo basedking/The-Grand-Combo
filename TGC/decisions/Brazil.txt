@@ -466,7 +466,7 @@ political_decisions = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { tag = BRZyear = 1910 }
+				NOT = { tag = BRZ year = 1910 }
 			}
 		}
 	}

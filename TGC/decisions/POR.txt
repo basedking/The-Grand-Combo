@@ -4,7 +4,10 @@ political_decisions = {
 	portugal-brazil = {
 		picture = dreams_of_empire
 		potential = {
-			tag = BRZ
+			OR = { 
+				tag = POR
+				tag = BRZ
+			}
 			BRZ = { owns = 2447 }
 		}
 
@@ -53,9 +56,9 @@ political_decisions = {
 	portuguese_civil_code = {
 		picture = enact_the_homestead_act
 		potential = {
-			is_core = 2447
+			is_core = 521
 			OR = {
-				tag = BRZ
+				tag = POR
 				tag = KPB
 			}
 			state_n_government = 1
@@ -88,9 +91,9 @@ political_decisions = {
 	treaty_of_simulambuko = {
 		picture = treaty_signing
 		potential = {
-			is_core = 2447
+			is_core = 521
 			OR = {
-				tag = BRZ
+				tag = POR
 				tag = KPB
 			}
 			KON = {
@@ -291,9 +294,9 @@ political_decisions = {
 		picture = map_east_indies
 		alert = no
 		potential = {
-			is_core = 2447
+			is_core = 521
 			OR = {
-				tag = BRZ
+				tag = POR
 				tag = KPB
 			}
 			OR = {
@@ -360,7 +363,7 @@ political_decisions = {
 		potential = {
 			owns = 2060
 			OR = {
-				tag = BRZ
+				tag = POR
 				tag = KPB
 			}
 			ai = yes
