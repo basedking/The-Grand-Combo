@@ -129,6 +129,13 @@ earthquake_devastation = {
 	icon = 18
 }
 
+magnetic_interference = {
+	war_exhaustion = 0.01
+	factory_output = -0.01
+	tax_efficiency = -0.01
+	icon = 8
+}
+
 #SAF modifiers
 open_homesteading = {
 	life_rating = 0.5
@@ -727,8 +734,8 @@ kinda_bad_badboy = {
 	diplomatic_points_modifier = -0.3
 	factory_owner_cost = 0.3
 	global_immigrant_attract = -0.5
-	non_accepted_pop_consciousness_modifier = 0.4
-	non_accepted_pop_militancy_modifier = 0.2
+	non_accepted_pop_consciousness_modifier = 0.25
+	non_accepted_pop_militancy_modifier = 0.1
 	political_reform_desire = 0.5
 	cb_generation_speed_modifier = -0.1
 	icon = 8
@@ -744,9 +751,9 @@ bad_badboy = {
 	factory_owner_cost = 1
 	global_immigrant_attract = -2.0
 	global_pop_consciousness_modifier = 0.05
-	non_accepted_pop_consciousness_modifier = 0.8
-	non_accepted_pop_militancy_modifier = 0.4
-	political_reform_desire = 0.8
+	non_accepted_pop_consciousness_modifier = 0.5
+	non_accepted_pop_militancy_modifier = 0.2
+	political_reform_desire = 0.6
 	org_regain = -0.1
 	land_organisation = -0.1
 	naval_organisation = -0.1
@@ -915,14 +922,14 @@ academic_confusion = {
 ## Liberal Revolutions ##
 
 	liberal_agitation = {
-		pop_consciousness_modifier = 0.2
+		pop_consciousness_modifier = 0.15
 		pop_militancy_modifier = 0.05
 		immigrant_push = 0.75
 		icon = 4
 	}
 
 	springtime_of_nations = {
-		core_pop_militancy_modifier = 0.2
+		core_pop_militancy_modifier = 0.1
 		icon = 8
 	}
 
@@ -1648,13 +1655,13 @@ boer_exodus = {
 }
 
 gold_rush_country = {
-	global_immigrant_attract = 0.5
+	global_immigrant_attract = 0.1
 	icon = 9
 }
 
 gold_rush = {
-	global_immigrant_attract = 0.5
-	immigrant_attract = 3		#300%
+	global_immigrant_attract = 0.2
+	immigrant_attract = 0.5		#300%
 	life_rating = 0.5
 	population_growth = 0.01
 	icon = 11
@@ -2284,7 +2291,7 @@ new_country = {
 	poor_everyday_needs = -0.2
 	middle_everyday_needs = -0.2
 	rich_everyday_needs = -0.2
-	icon = 19
+	icon = 5
 }
 
 ## Ethiopia ##
@@ -2617,13 +2624,13 @@ treaties_of_velasco = {
 	}
 
 	national_assimilation = {
-		assimilation_rate = 0.1
+		assimilation_rate = -0.25
 		immigrant_attract = 0.75
 		icon = 7
 	}
 
 	national_assimilation_rejection = {
-		assimilation_rate = -0.2
+		assimilation_rate = -0.5
 		immigrant_attract = -0.1
 		pop_militancy_modifier = 0.15
 		pop_consciousness_modifier = 0.05
@@ -4102,7 +4109,6 @@ slave_trade_cooldown_country = {
 slave_trade_cooldown_province = {
 	icon = 20
 }
-
 occupied_province = {
 	icon = 18
 }
@@ -4113,6 +4119,10 @@ border_control = {
 	global_pop_militancy_modifier = 0.01
 	global_pop_consciousness_modifier = 0.01
 	icon = 20
+}
+
+university_pretige_cooldown = {
+	icon = 5
 }
 
 slavepopupdated = { }

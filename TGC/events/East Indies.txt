@@ -932,12 +932,12 @@ country_event = {
 #Event to start wars between AI NET and AI Indonesian minors
 country_event = {
 	id = 95252
-	title = "EVTNAME95252"
-	desc = "EVTDESC95252"
+	title = "AIEVENT"
+	desc = "AIEVENT"
 	picture = "danishgovernment"
 
 	trigger = {
-		OR = {
+		OR = { 	#r's note: VOMIT
 			tag = ATJ
 			tag = SAK
 			tag = SLW
@@ -971,7 +971,7 @@ country_event = {
 	}
 
 	option = {
-		name = "EVTOPTA95252"
+		name = "AIEVENT"
 		NET = {
 			war = {
 				target = THIS

@@ -230,6 +230,7 @@ political_decisions = {
 			set_country_flag = form_greater_netherlands
 			prestige = 20
 			FLA = { all_core = { add_core = NET } }
+			inherit = GBL
 			inherit = BEL
 			inherit = WLL
 			inherit = FLA
@@ -354,6 +355,9 @@ political_decisions = {
 			badboy = 5
 			set_country_flag = artois_claimed
 			FRA_404 = { add_core = NET }
+			405 = { add_core = NET }
+			400 = { add_core = NET }
+			399 = { add_core = NET }
 			relation = { who = FRA value = -400 }
 		}
 

@@ -21,9 +21,7 @@
 			owner = {
 				OR = {
 					has_country_flag = democracy_gov
-					has_country_flag = absolute_monarchy_gov
-					has_country_flag = semi_constitutional_monarchy_gov
-					has_country_flag = constitutional_monarchy_gov
+					has_country_flag = monarchy_gov
 				}
 				OR = {
 					trade_unions = non_socialist
@@ -224,9 +222,7 @@
 			socialist = 5
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			OR = {
 				trade_unions = non_socialist
@@ -393,9 +389,7 @@
 			owner = {
 				OR = {
 					has_country_flag = democracy_gov
-					has_country_flag = absolute_monarchy_gov
-					has_country_flag = semi_constitutional_monarchy_gov
-					has_country_flag = constitutional_monarchy_gov
+					has_country_flag = monarchy_gov
 				}
 				OR = {
 					trade_unions = non_socialist
@@ -597,9 +591,7 @@
 			socialist = 15
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			OR = {
 				trade_unions = non_socialist
@@ -752,9 +744,7 @@
 			owner = {
 				OR = {
 					has_country_flag = democracy_gov
-					has_country_flag = absolute_monarchy_gov
-					has_country_flag = semi_constitutional_monarchy_gov
-					has_country_flag = constitutional_monarchy_gov
+					has_country_flag = monarchy_gov
 				}
 				OR = {
 					trade_unions = non_socialist
@@ -984,9 +974,7 @@
 			civilized = yes
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			OR = {
 				trade_unions = non_socialist
@@ -1134,9 +1122,7 @@
 			socialist = 10
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			public_meetings = yes_meeting
 			NOT = {
@@ -1283,9 +1269,7 @@
 			civilized = yes
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			press_rights = free_press
 		}
@@ -1417,9 +1401,7 @@
 			civilized = yes
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			any_owned_province = {
 				OR = {
@@ -1620,9 +1602,7 @@
 			socialist = 5
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			any_state = {
 				has_building = factory
@@ -1797,9 +1777,7 @@
 			civilized = yes
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			OR = {
 				any_core = {
@@ -1974,9 +1952,7 @@
 			NOT = { has_country_flag = paramilitaries_outlawed }
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			OR = {
 				any_core = {
@@ -2151,9 +2127,7 @@
 			civilized = yes
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			any_owned_province = {
 				is_colonial = no
@@ -2165,48 +2139,45 @@
 					NOT = { poor_strata_life_needs = 0.9 }
 				}
 			}
+			NOT = { has_country_flag = soup_ban }
 		}
 
 		mean_time_to_happen = {
-			months = 150
+			months = 200
 			modifier = {
 				factor = 0.9
 				average_consciousness = 5
 			}
 			modifier = {
-				factor = 0.9
+				factor = 0.8
 				average_consciousness = 7
 			}
 			modifier = {
-				factor = 0.7
-				average_militancy = 3
-			}
-			modifier = {
 				factor = 0.6
-				average_militancy = 4
-			}
-			modifier = {
-				factor = 0.5
 				average_militancy = 5
 			}
 			modifier = {
-				factor = 0.8
+				factor = 0.5
+				average_militancy = 6
+			}
+			modifier = {
+				factor = 0.9
 				great_war_experience = 1
 			}
 			modifier = {
-				factor = 0.8
+				factor = 0.9
 				mass_politics = 1
 			}
 			modifier = {
-				factor = 0.8
+				factor = 0.9
 				anti__rationalism = 1
 			}
 			modifier = {
-				factor = 0.8
+				factor = 0.9
 				social_alienation = 1
 			}
 			modifier = {
-				factor = 0.8
+				factor = 0.7
 				has_recently_lost_war = yes
 			}
 			modifier = {
@@ -2217,7 +2188,7 @@
 				}
 			}
 			modifier = {
-				factor = 0.8
+				factor = 0.7
 				is_disarmed = yes
 			}
 			modifier = {
@@ -2229,7 +2200,7 @@
 				NOT = { average_consciousness = 4 }
 			}
 			modifier = {
-				factor = 1.5
+				factor = 2
 					nationalvalue = nv_liberty
 			}
 
@@ -2308,6 +2279,35 @@
 				}
 			}
 		}
+
+		option = {
+			name = "EVTOPTC17620"
+			set_country_flag = soup_ban
+			random_state = {
+				limit = {
+					is_colonial = no
+					any_owned_province = {
+						fascist = 4
+						is_primary_culture = yes
+						NOT = { has_province_modifier = fascist_welfare }
+						OR = {
+							unemployment = 0.1
+							NOT = { poor_strata_life_needs = 0.9 }
+						}
+					}
+				}
+				poor_strata = {
+					limit = {
+						OR = {
+							is_primary_culture = yes
+							is_accepted_culture = yes
+						}
+					}
+					militancy = 5
+					consciousness = 3
+				}
+			}
+		}
 	}
 
 	#March on capital
@@ -2328,9 +2328,7 @@
 			fascist = 30
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			NOT = { has_country_flag = march_on_capital }
 		}
@@ -2497,9 +2495,7 @@
 			war = no
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			OR = {
 				any_core = {
@@ -2685,9 +2681,7 @@
 			press_rights = free_press
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			OR = {
 				any_core = {
@@ -2842,9 +2836,7 @@
 			civilized = yes
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			any_owned_province = {
 				has_province_modifier = black_shirts
@@ -3006,9 +2998,7 @@
 			fascist = 10
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			OR = {
 				any_core = {
@@ -3188,9 +3178,7 @@
 			fascist = 10
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			any_owned_province = {
 				has_province_modifier = black_shirts
@@ -3354,9 +3342,7 @@
 			civilized = yes
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			any_owned_province = {
 				is_colonial = no
@@ -3536,9 +3522,7 @@
 			NOT = { trade_unions = no_trade_unions }
 			OR = {
 				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
-				has_country_flag = constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 			}
 			any_owned_province = {
 				is_colonial = no
@@ -3711,9 +3695,7 @@
 		trigger = {
 			ruling_party_ideology = fascist
 			OR = {
-				has_country_flag = democracy_gov
-				has_country_flag = absolute_monarchy_gov
-				has_country_flag = semi_constitutional_monarchy_gov
+				has_country_flag = monarchy_gov
 				has_country_flag = constitutional_monarchy_gov
 			}
 			year = 1900

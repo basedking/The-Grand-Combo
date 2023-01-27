@@ -21,7 +21,7 @@ equivalent = farmers
 		tea = 4
 		coal = 1
 		liquor = 2
-		regular_clothes = 1.2
+		regular_clothes = 3
 		furniture = 1.1
 		coffee = 2
 		tobacco = 1
@@ -49,6 +49,12 @@ country_migration_target = {
 			border_policy = quota_immigration
 			#Audax Validator "." Ignore_1001
 			THIS = { NOT = { literacy = 0.6 } }
+		}
+
+	## South America Fix
+		modifier = {
+			factor = 1.25
+			capital_scope = { is_colonial = no continent = south_america }
 		}
 
 	## Unemployment ##

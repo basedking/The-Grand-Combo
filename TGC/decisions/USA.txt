@@ -2267,6 +2267,7 @@ political_decisions = {
 	annexation_santo_domingo = {
 		picture = annexation_santo_domingo
 		potential = {
+			is_culture_group = american_cultures
 			OR = {
 				tag = USA
 				tag = CSA
@@ -2651,6 +2652,7 @@ political_decisions = {
 			badboy = 20
 			add_accepted_culture = anglo_canadian
 			CAN = { all_core = { add_core = USA } } # Canada
+			FCA = { all_core = { add_core = USA } } # French Canada
 			MRU = { all_core = { add_core = USA } } # Maritime Union
 			ENG_6 = { add_core = USA } # Yukon
 			ENG_9 = { add_core = USA } # Northwest Territories
@@ -3414,11 +3416,7 @@ political_decisions = {
 			has_country_flag = NW_hegemony
 			NOT = { has_global_flag = mexican_monarch }
 			MEX = {
-				OR = {
-					has_country_flag = constitutional_monarchy_gov
-					has_country_flag = semi_constitutional_monarchy_gov
-					has_country_flag = absolute_monarchy_gov
-				}
+				has_country_flag = monarchy_gov
 			}
 		}
 		allow = {
@@ -3690,7 +3688,7 @@ political_decisions = {
 			}
 			any_country = {
 				limit = {
-					NOT = { tag = BRZ }
+					NOT = { tag = BRZ}
 					any_owned_province = {
 						OR = {
 							is_core = GCO
@@ -3840,11 +3838,7 @@ political_decisions = {
 			NOT = { has_country_flag = USA_demcoup }
 			MEX = { has_country_flag = democracy_gov }
 			BRZ = {
-				OR = {
-					has_country_flag = constitutional_monarchy_gov
-					has_country_flag = absolute_monarchy_gov
-					has_country_flag = semi_constitutional_monarchy_gov
-				}
+				has_country_flag = monarchy_gov
 			}
 		}
 

@@ -67,7 +67,8 @@ tax_eff = 1.0
 		fruit = 1
 		wool = 3
 		opium = 1
-		luxury_clothes = 1
+		regular_clothes = 5
+		luxury_clothes = 2
 		luxury_furniture = 1.5
 		telephones = 1.25
 		automobiles = 1
@@ -87,6 +88,13 @@ country_migration_target = {
 			#Audax Validator "." Ignore_1001
 			THIS = { NOT = { literacy = 0.6 } }
 		}
+
+		## South America Fix
+		modifier = {
+			factor = 1.25
+			capital_scope = { is_colonial = no continent = south_america }
+		}
+
 
 	## Unemployment ##
 		modifier = {

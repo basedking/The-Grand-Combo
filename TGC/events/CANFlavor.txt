@@ -13,11 +13,11 @@
 		picture = "rebellion"
 
 		trigger = {
-			OR = {
+			owns = 57 # Bytown / Ottawa
+			OR = { 
 				tag = ENG
 				tag = ENL
 			}
-			owns = 57 # Bytown / Ottawa
 			NOT = {
 				exists = CAN
 				has_country_flag = rebellion_1837_begun
@@ -81,12 +81,12 @@
 		picture = "deliberation"
 
 		trigger = {
-			OR = {
+			owns = 57 # Bytown / Ottawa
+			owns = 65 # Quebec City
+			OR = { 
 				tag = ENG
 				tag = ENL
 			}
-			owns = 57 # Bytown / Ottawa
-			owns = 65 # Quebec City
 			has_country_flag = rebellion_1837_begun
 			OR = {
 				has_country_flag = democracy_gov
@@ -207,12 +207,12 @@
 		picture = "confederation"
 
 		trigger = {
-			OR = {
+			owns = 57 # Bytown / Ottawa
+			owns = 71 # Halifax
+			OR = { 
 				tag = ENG
 				tag = ENL
 			}
-			owns = 57 # Bytown / Ottawa
-			owns = 71 # Halifax
 			65 = { is_core = CAN } # Quebec City
 			nationalism_n_imperialism = 1
 			year = 1860
@@ -319,7 +319,8 @@
 		major = yes
 
 		trigger = {
-			OR = {
+			primary_culture = british
+			OR = { 
 				tag = ENG
 				tag = ENL
 			}
@@ -379,7 +380,7 @@
 			CAN = {
 				prestige = -100
 				relation = { who = USA value = 200 }
-				government = eng_dominion
+				government = dominion
 			}
 			13 = { # Vancouver
 				add_province_modifier = {
@@ -520,7 +521,7 @@
 			release_vassal = CAN
 			CAN = {
 				prestige = -100
-				government = eng_dominion
+				government = dominion
 				relation = { who = USA value = 200 }
 			}
 			relation = {
@@ -548,7 +549,8 @@
 		major = yes
 
 		trigger = {
-			OR = {
+			primary_culture = british
+			OR = { 
 				tag = ENG
 				tag = ENL
 			}
@@ -853,7 +855,8 @@
 		major = yes
 
 		trigger = {
-			OR = {
+			primary_culture = british
+			OR = { 
 				tag = ENG
 				tag = ENL
 			}
@@ -992,7 +995,7 @@
 			}
 			create_vassal = MRU
 			MRU = {
-				government = eng_dominion
+				government = dominion
 				prestige = -100
 				relation = { who = USA value = 200 }
 			}
@@ -1126,7 +1129,7 @@
 			}
 			release_vassal = MRU
 			MRU = {
-				government = eng_dominion
+				government = dominion
 				prestige = -100
 				relation = { who = USA value = 200 }
 			}
@@ -1155,7 +1158,8 @@
 		major = yes
 
 		trigger = {
-			OR = {
+			primary_culture = british
+			OR = { 
 				tag = ENG
 				tag = ENL
 			}
@@ -1320,7 +1324,7 @@
 			}
 			create_vassal = COL
 			COL = {
-				government = eng_dominion
+				government = dominion
 				prestige = -100
 				relation = { who = USA value = 200 }
 			}
@@ -1456,7 +1460,7 @@
 			}
 			release_vassal = COL
 			COL = {
-				government = eng_dominion
+				government = dominion
 				prestige = -100
 				relation = { who = USA value = 200 }
 			}
@@ -1487,7 +1491,8 @@
 		major = yes
 
 		trigger = {
-			OR = {
+			primary_culture = british
+			OR = { 
 				tag = ENG
 				tag = ENL
 			}
@@ -1634,7 +1639,7 @@
 			create_vassal = NEW
 			NEW = {
 				prestige = -80
-				government = eng_dominion
+				government = dominion
 			}
 			relation = {
 				who = NEW
@@ -1786,7 +1791,8 @@
 		picture = "alaska"
 
 		trigger = {
-			OR = {
+			primary_culture = british
+			OR = { 
 				tag = ENG
 				tag = ENL
 			}
@@ -2054,7 +2060,7 @@
 		picture = "train"
 
 		trigger = {
-			tag = CAN
+			OR = { tag = CAN tag = FCA }
 			year = 1872
 			has_country_flag = build_the_cnr
 		}
@@ -2195,7 +2201,7 @@
 						AND = {
 							relation = { who = THIS value = 100 }
 							OR = {
-								government = eng_dominion
+								government = dominion
 								has_country_flag = constitutional_monarchy_gov
 								has_country_flag = democracy_gov
 							}
@@ -2570,7 +2576,7 @@
 						in_sphere = THIS
 						vassal_of = THIS
 						AND = {
-							government = eng_dominion
+							government = dominion
 							relation = { who = THIS value = 100 }
 						}
 						AND = {
@@ -2681,7 +2687,7 @@
 			picture = "bagdadrailway"
 
 			trigger = {
-				tag = CAN
+				OR = { tag = CAN tag = FCA }
 				war = no
 				has_country_flag = build_the_cnr1
 				owns = 36
@@ -2734,7 +2740,7 @@
 			picture = "bagdadrailway"
 
 			trigger = {
-				tag = CAN
+				OR = { tag = CAN tag = FCA }
 				war = no
 				has_country_flag = build_the_cnr2
 				owns = 26
@@ -2794,8 +2800,10 @@
 				owns = 42 # Winnipeg MB
 				owns = 57 # Ottawa ON
 				NOT = {
-					has_country_flag = RielRebellion
-					has_country_flag = RielRebellionIgnored
+					OR = {
+						has_country_flag = riel_rebellion
+						has_country_flag = riel_rebellion_ignored
+					}
 				}
 			}
 
@@ -2815,8 +2823,7 @@
 			option = {
 				name = "EVTOPTA44301"
 
-				set_country_flag = RielRebellion
-				set_country_flag = RielRebellionIgnored
+				set_country_flag = riel_rebellion
 				any_pop = {
 					limit = { has_pop_culture = french_canadian }
 					militancy = 5
@@ -2832,14 +2839,14 @@
 					consciousness = 2
 				}
 
-				ai_chance = { factor = 20 }
+				ai_chance = { factor = 0.5 }
 			}
 
 			# Ignore the Metis demands
 			option = {
 				name = "EVTOPTB44301"
 
-				set_country_flag = RielRebellion
+				set_country_flag = riel_rebellion_ignored
 				any_pop = {
 					limit = { has_pop_culture = french_canadian }
 					militancy = 1
@@ -2863,7 +2870,7 @@
 					}
 				}
 
-				ai_chance = { factor = 80 }
+				ai_chance = { factor = 2 }
 			}
 		}
 
@@ -2882,8 +2889,10 @@
 				tag = CAN
 				year = 1884
 				owns = 57 # Ottawa ON
-				has_country_flag = RielRebellion
-				NOT = { has_country_flag = RielRebellionIgnored }
+				OR = {
+					has_country_flag = riel_rebellion
+					has_country_flag = riel_rebellion_ignored
+				}
 				OR = {
 					owns = 30 # Saskatchewan
 					owns = 32
@@ -2894,12 +2903,22 @@
 				}
 				NOT = {
 					year = 1888
-					has_country_flag = NorthwestRebellion
+					has_country_flag = northwest_rebellion
 				}
 			}
 
 			mean_time_to_happen = {
 				months = 8
+				modifier = {
+					factor = 0.5
+					any_pop = {
+						location = {
+							is_core = MTC
+						}
+					}
+					militancy = 3
+					consciousness = 4
+				}
 				modifier = {
 					factor = 0.75 #increase likelihood to happen
 					year = 1885
@@ -2913,7 +2932,7 @@
 			option = {
 				name = "EVTOPTA44302"
 
-				set_country_flag = NorthwestRebellion
+				set_country_flag = northwest_rebellion
 				any_pop = {
 					limit = { has_pop_culture = metis }
 					militancy = 7
@@ -2958,8 +2977,8 @@
 				owns = 42
 				revolution_n_counterrevolution = 1
 				OR = {
-					has_country_flag = RielRebellionIgnored
-					has_country_flag = NorthwestRebellion
+					has_country_flag = riel_rebellion_ignored
+					has_country_flag = northwest_rebellion
 				}
 				NOT = {
 					has_country_flag = metis_pacification
@@ -3663,7 +3682,7 @@
 		fire_only_once = yes
 
 		trigger = {
-			tag = CAN
+			OR = { tag = CAN tag = FCA }
 			year = 1892
 		}
 
@@ -3686,7 +3705,7 @@
 		picture = "mcgeefuneral"
 
 		trigger = {
-			tag = CAN
+			OR = { tag = CAN tag = FCA }
 			year = 1866
 			owns = 57
 			NOT = { year = 1890 }
@@ -3766,7 +3785,7 @@
 		picture = "diamonds_in_kimberley"
 
 		trigger = {
-			tag = CAN
+			OR = { tag = CAN tag = FCA }
 			owns = 7
 			has_global_flag = klondike_gold_rush
 		}
@@ -3783,204 +3802,3 @@
 			prestige = 5
 		}
 	}
-
-	## Gold Rush ## TODO localization
-
-		#Description: Fraser Gold Rush
-		province_event = {
-			id = 144300
-			title = "EVTNAME144300"
-			desc = "EVTDESC144300"
-			picture = "goldrush"
-
-			trigger = {
-				province_id = 13 # Vancouver
-				year = 1853
-			}
-
-			fire_only_once = yes
-
-			mean_time_to_happen = {
-				months = 60
-			}
-
-			immediate = { set_global_flag = fraser_gold_rush }
-
-			option = {
-				name = "EVTOPTA144300"
-
-				trade_goods = precious_metal
-				add_province_modifier = { name = gold_rush duration = 730 }
-			}
-		}
-
-		#Description: Cariboo Gold Rush
-		country_event = {
-			id = 144400
-			title = "EVTNAME144400"
-			desc = "EVTDESC144400"
-			picture = "goldrush"
-
-			trigger = {
-				owns = 13 # Vancouver
-				owns = 19
-				owns = 20
-				year = 1856
-				has_global_flag = fraser_gold_rush
-			}
-
-			fire_only_once = yes
-
-			mean_time_to_happen = {
-				months = 60
-			}
-
-			immediate = { set_global_flag = cariboo_gold_rush }
-
-			option = {
-				name = "EVTOPTA144400"
-
-				19 = {
-					trade_goods = precious_metal
-					add_province_modifier = { name = gold_rush duration = 730 }
-				}
-				20 = {
-					trade_goods = precious_metal
-					add_province_modifier = { name = gold_rush duration = 730 }
-				}
-			}
-		}
-
-		#Description: Omineca Gold Rush
-		country_event = {
-			id = 144500
-			title = "EVTNAME144500"
-			desc = "EVTDESC144500"
-			picture = "goldrush"
-
-			trigger = {
-				owns = 13 # Vancouver
-				owns = 15
-				owns = 16
-				year = 1859
-				has_global_flag = cariboo_gold_rush
-			}
-
-			fire_only_once = yes
-
-			mean_time_to_happen = {
-				months = 60
-			}
-
-			immediate = { set_global_flag = omineca_gold_rush }
-
-			option = {
-				name = "EVTOPTA144500"
-
-				15 = {
-					trade_goods = precious_metal
-					add_province_modifier = { name = gold_rush duration = 730 }
-				}
-				16 = {
-					trade_goods = precious_metal
-					add_province_modifier = { name = gold_rush duration = 730 }
-				}
-			}
-		}
-
-		#Description: Stikine Gold Rush
-		country_event = {
-			id = 144600
-			title = "EVTNAME144600"
-			desc = "EVTDESC144600"
-			picture = "goldrush"
-
-			trigger = {
-				owns = 13 # Vancouver
-				owns = 17
-				year = 1864
-				has_global_flag = omineca_gold_rush
-			}
-
-			fire_only_once = yes
-
-			mean_time_to_happen = {
-				months = 60
-			}
-
-			immediate = { set_global_flag = stikine_gold_rush }
-
-			option = {
-				name = "EVTOPTA144600"
-
-				#Atlin
-				17 = {
-					trade_goods = precious_metal
-					add_province_modifier = { name = gold_rush duration = 730 }
-				}
-			}
-		}
-
-		#Description: Gold Rush Ends
-		province_event = {
-			id = 144700
-			title = "EVTNAME144700"
-			desc = "EVTDESC144700"
-
-			trigger = {
-				OR = {
-					province_id = 13
-					province_id = 15
-					province_id = 16
-					province_id = 17
-					province_id = 19
-				}
-				trade_goods = precious_metal
-			}
-
-			fire_only_once = yes
-
-			mean_time_to_happen = {
-				months = 24
-				modifier = {
-					factor = 4
-					has_province_modifier = gold_rush
-				}
-			}
-
-			option = {
-				name = "EVTOPTA144700"
-
-				trade_goods = timber
-				remove_province_modifier = gold_rush
-			}
-		}
-
-		#Description: Gold Rush ends, specific to Kelowna
-		province_event = {
-			id = 144900
-			title = "EVTNAME144900"
-			desc = "EVTDESC144900"
-
-			trigger = {
-				province_id = 20
-				trade_goods = precious_metal
-			}
-
-			fire_only_once = yes
-
-			mean_time_to_happen = {
-				months = 24
-				modifier = {
-					factor = 4
-					has_province_modifier = gold_rush
-				}
-			}
-
-			option = {
-				name = "EVTOPTA144900"
-
-				trade_goods = grain
-				remove_province_modifier = gold_rush
-			}
-		}

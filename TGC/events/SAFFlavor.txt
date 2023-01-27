@@ -1288,13 +1288,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
+		primary_culture = boer
+		OR = { 
 			tag = SAF
 			tag = VLK
 		}
 		invention = manifest_destiny
 		ideological_thought = 1
-		primary_culture = boer
 		NOT = { has_country_flag = afrikaner_church_n_nationalism }
 	}
 
@@ -1463,12 +1463,12 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
+		owns = 2105
+		owns = 2106
+		OR = { 
 			tag = VLK
 			tag = SAF
 		}
-		owns = 2105
-		owns = 2106
 		exists = ZOU
 	}
 
@@ -2447,7 +2447,8 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = {
+		primary_culture = boer
+		OR = { 
 			tag = TRN
 			tag = VLK
 			tag = ORA
@@ -2503,11 +2504,7 @@ country_event = {
 					truce_with = ENG
 					war_policy = pacifism
 				}
-				OR = {
-					has_country_flag = absolute_monarchy_gov
-					has_country_flag = semi_constitutional_monarchy_gov
-					has_country_flag = constitutional_monarchy_gov
-				}
+				has_country_flag = monarchy_gov
 			}
 			country_event = 6052 #Kruger telegram
 		}
@@ -2520,11 +2517,7 @@ country_event = {
 					truce_with = ENG
 					war_policy = pacifism
 				}
-				OR = {
-					has_country_flag = absolute_monarchy_gov
-					has_country_flag = semi_constitutional_monarchy_gov
-					has_country_flag = constitutional_monarchy_gov
-				}
+				has_country_flag = monarchy_gov
 			}
 			country_event = 6052 #Kruger telegram
 		}
@@ -2566,11 +2559,7 @@ country_event = {
 					truce_with = ENG
 					war_policy = pacifism
 				}
-				OR = {
-					has_country_flag = absolute_monarchy_gov
-					has_country_flag = semi_constitutional_monarchy_gov
-					has_country_flag = constitutional_monarchy_gov
-				}
+				has_country_flag = monarchy_gov
 			}
 			country_event = 6052 #Kruger telegram
 		}
@@ -2583,11 +2572,7 @@ country_event = {
 					truce_with = ENG
 					war_policy = pacifism
 				}
-				OR = {
-					has_country_flag = absolute_monarchy_gov
-					has_country_flag = semi_constitutional_monarchy_gov
-					has_country_flag = constitutional_monarchy_gov
-				}
+				has_country_flag = monarchy_gov
 			}
 			country_event = 6052 #Kruger telegram
 		}
@@ -2768,12 +2753,14 @@ country_event = {
 
 	major = yes
 
-	trigger = {
+	trigger = {     
+		tag = ENG                                # TO DO: Do a version for non-uk players
 		war = no
 		year = 1909
 		any_owned_province = { is_core = SAF }
 		NOT = { exists = SAF }
 		is_possible_vassal = SAF
+		
 	}
 
 	mean_time_to_happen = {
@@ -3016,7 +3003,8 @@ country_event = {
 	major = yes
 
 	trigger = {
-		OR = {
+		primary_culture = british
+		OR = { 
 			tag = ENG
 			tag = ENL
 		}
@@ -3061,7 +3049,7 @@ country_event = {
 			limit = { location = { is_core = RHO } }
 			militancy = -10
 		}
-		RHO = { government = eng_dominion all_core = { remove_core = ENG } }
+		RHO = { government = dominion all_core = { remove_core = ENG } }
 		ZAM = { all_core = { remove_core = RHO } }
 		any_owned = { limit = { is_core = RHO } secede_province = RHO }
 		create_vassal = RHO
@@ -3173,7 +3161,7 @@ country_event = {
 			limit = { location = { is_core = RHO } }
 			militancy = -10
 		}
-		RHO = { government = eng_dominion all_core = { remove_core = ENG } }
+		RHO = { government = dominion all_core = { remove_core = ENG } }
 		ZAM = { all_core = { remove_core = RHO } }
 		any_owned = { limit = { is_core = RHO } secede_province = RHO }
 		create_vassal = RHO
